@@ -1,0 +1,311 @@
+---
+import Header from '../components/Header.astro';
+
+const proyectos = [
+  {
+    titulo: "Portfolio Personal con Astro",
+    descripcion: "Portfolio profesional desarrollado con Astro, incluyendo sistema de componentes reutilizables y despliegue en GitHub.",
+    tecnologias: ["Astro", "JavaScript", "CSS", "Git"],
+    github: "https://github.com/Adrianjr1994/proyecto-astro",
+    estado: "En desarrollo"
+  },
+  {
+    titulo: "Tutorial Django Girls",
+    descripcion: "Implementación del tutorial Django Girls para aprender desarrollo web con Python y Django.",
+    tecnologias: ["Python", "Django", "HTML", "CSS"],
+    github: "#",
+    estado: "Completado"
+  },
+  {
+    titulo: "Trabajo Fin de FP - DAW",
+    descripcion: "Proyecto final del ciclo de Desarrollo de Aplicaciones Web. Aplicación web completa con gestión de usuarios y base de datos.",
+    tecnologias: ["HTML", "CSS", "JavaScript", "PHP/Java"],
+    github: null,
+    estado: "Completado"
+  }
+];
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Proyectos - Adrián</title>
+  </head>
+  <body>
+    <Header />
+
+    <main>
+      <section class="hero">
+        <h1>Mis Proyectos</h1>
+        <p class="subtitle">Trabajos y prácticas en desarrollo web</p>
+      </section>
+
+      <div class="proyectos-container">
+        {proyectos.map(proyecto => (
+          <article class="proyecto-card">
+            <div class="header">
+              <h2>{proyecto.titulo}</h2>
+              <span class={`estado ${proyecto.estado.toLowerCase().replace(' ', '-')}`}>
+                {proyecto.estado}
+              </span>
+            </div>
+            
+            <p class="descripcion">{proyecto.descripcion}</p>
+            
+            <div class="tecnologias">
+              <strong>Tecnologías:</strong>
+              <div class="tech-tags">
+                {proyecto.tecnologias.map(tech => (
+                  <span class="tag">{tech}</span>
+                ))}
+              </div>
+            </div>
+
+            {proyecto.github && (
+              <div class="links">
+                {proyecto.github !== "#" ? (
+                  <a href={proyecto.github} target="_blank" class="btn-github">
+                    📦 Ver en GitHub
+                  </a>
+                ) : (
+                  <span class="no-link">Repositorio privado</span>
+                )}
+              </div>
+            )}
+
+            {!proyecto.github && (
+              <p class="nota">📝 Proyecto local (no disponible en GitHub)</p>
+            )}
+          </article>
+        ))}
+      </div>
+
+      <section class="futuros">
+        <h2>🚀 Proyectos Futuros</h2>
+        <p>
+          Actualmente estoy trabajando en expandir mi portfolio con nuevos proyectos que incluyen:
+          desarrollo con React, APIs con Node.js, y aplicaciones full-stack con Python/Django.
+        </p>
+        <p>
+          Todos los proyectos futuros estarán disponibles en mi 
+          <a href="https://github.com/Adrianjr1994" target="_blank">perfil de GitHub</a>.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Adrián - Desarrollador Web</p>
+    </footer>
+  </body>
+</html>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  /* Hero section - igual que sobre-mi */
+  .hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+    opacity: 0.95;
+  }
+
+  
+  .proyectos-container {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  
+  .proyecto-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-left: 4px solid #667eea;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .proyecto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 1rem;
+    gap: 1rem;
+  }
+
+  .proyecto-card h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .estado {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .en-desarrollo {
+    background: #fef3c7;
+    color: #92400e;
+  }
+
+  .completado {
+    background: #d1fae5;
+    color: #065f46;
+  }
+
+  .descripcion {
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    font-size: 1.1rem;
+  }
+
+  .tecnologias {
+    margin-bottom: 1.5rem;
+  }
+
+  .tecnologias strong {
+    color: #667eea;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+  .links {
+    margin-top: 1rem;
+  }
+
+  .btn-github {
+    display: inline-block;
+    background: #333;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+
+  .btn-github:hover {
+    background: #667eea;
+  }
+
+  .no-link {
+    color: #999;
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+
+  .nota {
+    color: #999;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+
+  
+  .futuros {
+    background: white;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .futuros h2 {
+    color: #667eea;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  .futuros p {
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    font-size: 1.1rem;
+  }
+
+  .futuros p:last-child {
+    margin-bottom: 0;
+  }
+
+  .futuros a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .futuros a:hover {
+    text-decoration: underline;
+  }
+
+  
+  footer {
+    text-align: center;
+    padding: 2rem;
+    color: white;
+  }
+</style>

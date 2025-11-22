@@ -1,0 +1,212 @@
+---
+import Header from '../components/Header.astro';
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Sobre mí - Adrián</title>
+  </head>
+  <body>
+    <Header />
+
+    <main>
+      <section class="hero">
+        <h1>Sobre mí</h1>
+        <p class="subtitle">Desarrollador web en constante aprendizaje</p>
+      </section>
+
+      <section class="bio">
+        <h2>🚀 Mi trayectoria</h2>
+        <p>
+          Soy Adrián, un desarrollador web apasionado por la tecnología y el aprendizaje continuo. 
+          Mi camino profesional combina formación académica diversa con habilidades técnicas en constante evolución.
+        </p>
+      </section>
+
+      <section class="formacion">
+        <h2>🎓 Formación</h2>
+        <div class="item">
+          <h3>Grado en Filosofía</h3>
+          <p>Formación universitaria que me ha dotado de pensamiento crítico, análisis y capacidad de abstracción.</p>
+        </div>
+        <div class="item">
+          <h3>FP en Desarrollo de Aplicaciones Web (DAW)</h3>
+          <p>Formación técnica especializada en desarrollo web, bases de datos y programación.</p>
+        </div>
+        <div class="item">
+          <h3>Curso de Gestión de Almacenes</h3>
+          <p>Formación complementaria en logística y organización empresarial.</p>
+        </div>
+      </section>
+
+      <section class="tecnologias">
+        <h2>💻 Tecnologías que estoy aprendiendo</h2>
+        <div class="tech-grid">
+          <div class="tech-card">
+            <span class="icon">⚡</span>
+            <h3>JavaScript</h3>
+            <p>Fundamentos, ES6+, manipulación del DOM</p>
+          </div>
+          <div class="tech-card">
+            <span class="icon">📘</span>
+            <h3>TypeScript</h3>
+            <p>JavaScript con tipos para código más robusto</p>
+          </div>
+          <div class="tech-card">
+            <span class="icon">🚀</span>
+            <h3>Astro</h3>
+            <p>Framework moderno para sitios web ultrarrápidos</p>
+          </div>
+          <div class="tech-card">
+            <span class="icon">🐍</span>
+            <h3>Python</h3>
+            <p>Desarrollo backend, APIs y automatización</p>
+          </div>
+          <div class="tech-card">
+            <span class="icon">🔷</span>
+            <h3>.NET</h3>
+            <p>Framework empresarial de Microsoft</p>
+          </div>
+          <div class="tech-card">
+            <span class="icon">📦</span>
+            <h3>Git & GitHub</h3>
+            <p>Control de versiones y colaboración</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="objetivo">
+        <h2>🎯 Objetivo</h2>
+        <p>
+          Estoy enfocado en dominar el desarrollo web moderno, combinando tecnologías frontend (Astro, React) 
+          con backend (Python, Node.js). Mi objetivo es construir aplicaciones web eficientes, escalables 
+          y con excelente experiencia de usuario.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Adrián - Desarrollador Web</p>
+    </footer>
+  </body>
+</html>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  section {
+    background: white;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .hero {
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+    opacity: 0.95;
+  }
+
+  h2 {
+    color: #667eea;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  .bio p, .objetivo p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+  }
+
+  .item {
+    margin-bottom: 2rem;
+  }
+
+  .item:last-child {
+    margin-bottom: 0;
+  }
+
+  .item h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+
+  .item p {
+    color: #666;
+  }
+
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .tech-card {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border-top: 3px solid #667eea;
+  }
+
+  .tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+
+  .icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .tech-card h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .tech-card p {
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem;
+    color: white;
+  }
+</style>

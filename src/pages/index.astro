@@ -1,4 +1,5 @@
 ---
+import Header from '../components/Header.astro';
 const nombre = "Adrián";
 const proyectos = [
   { titulo: "Proyecto 1", descripcion: "Mi primer proyecto web" },
@@ -14,6 +15,9 @@ const proyectos = [
     <title>Portfolio de {nombre}</title>
   </head>
   <body>
+
+    <Header />
+
     <header>
       <h1>👋 Hola, soy {nombre}</h1>
       <p>Desarrollador web en formación</p>

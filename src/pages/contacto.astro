@@ -1,0 +1,241 @@
+---
+import Header from '../components/Header.astro';
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Contacto - Adrián</title>
+  </head>
+  <body>
+    <Header />
+
+    <main>
+      <section class="hero">
+        <h1>Contacto</h1>
+        <p class="subtitle">¿Hablamos? Estoy disponible para colaborar</p>
+      </section>
+
+      <section class="intro">
+        <h2>📬 Ponte en contacto</h2>
+            <p>
+            Estoy en proceso de formación activa como desarrollador web, combinando mi experiencia en filosofía 
+            con habilidades técnicas en tecnologías modernas. Si buscas un desarrollador junior motivado, 
+            quieres colaborar en proyectos de aprendizaje o compartir conocimientos sobre desarrollo web, 
+            me encantaría conectar contigo.
+  </p>
+</section>
+
+      <section class="metodos-contacto">
+        <div class="contacto-grid">
+          <a href="mailto:adrianjuarezrodriguez94.com" class="contacto-card">
+            <span class="icon">📧</span>
+            <h3>Email</h3>
+            <p>tu-email@ejemplo.com</p>
+            <span class="cta">Enviar email →</span>
+          </a>
+
+          <a href="https://github.com/Adrianjr1994" target="_blank" class="contacto-card">
+            <span class="icon">💻</span>
+            <h3>GitHub</h3>
+            <p>@Adrianjr1994</p>
+            <span class="cta">Ver perfil →</span>
+          </a>
+
+          <a href="https://linkedin.com/in/tu-perfil" target="_blank" class="contacto-card">
+            <span class="icon">💼</span>
+            <h3>LinkedIn</h3>
+            <p>Adrián Juárez</p>
+            <span class="cta">Conectar →</span>
+          </a>
+
+          <a href="https://twitter.com/tu-usuario" target="_blank" class="contacto-card">
+            <span class="icon">🐦</span>
+            <h3>Twitter / X</h3>
+            <p>@tu_usuario</p>
+            <span class="cta">Seguir →</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="disponibilidad">
+        <h2>⏰ Disponibilidad</h2>
+        <p>
+          Actualmente estoy <strong style="color: #10b981;">disponible</strong> para:
+        </p>
+        <ul>
+          <li>💼 Oportunidades laborales (junior developer)</li>
+          <li>🤝 Proyectos freelance</li>
+          <li>👥 Colaboraciones en proyectos open source</li>
+          <li>📚 Mentorías y networking</li>
+        </ul>
+        <p style="margin-top: 1.5rem;">
+          Tiempo de respuesta habitual: <strong>24-48 horas</strong>
+        </p>
+      </section>
+
+      <section class="ubicacion">
+        <h2>📍 Ubicación</h2>
+        <p>
+          📌 Madrid, España<br>
+          🌍 Abierto a trabajo remoto en toda España y Europa
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Adrián - Desarrollador Web</p>
+    </footer>
+  </body>
+</html>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  section {
+    background: white;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .hero {
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+    opacity: 0.95;
+  }
+
+  h2 {
+    color: #667eea;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  .intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+  }
+
+  .metodos-contacto {
+    padding: 2rem;
+  }
+
+  .contacto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .contacto-card {
+    background: #f8f9fa;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    border-top: 3px solid #667eea;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contacto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    background: white;
+  }
+
+  .icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .contacto-card h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .contacto-card p {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .cta {
+    color: #667eea;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .contacto-card:hover .cta {
+    color: #764ba2;
+  }
+
+  .disponibilidad p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+  }
+
+  .disponibilidad ul {
+    list-style: none;
+    margin-top: 1rem;
+  }
+
+  .disponibilidad li {
+    padding: 0.7rem 0;
+    color: #555;
+    font-size: 1.05rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .disponibilidad li:last-child {
+    border-bottom: none;
+  }
+
+  .ubicacion p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem;
+    color: white;
+  }
+</style>
